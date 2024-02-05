@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 1rem;
   min-height: 100vh;
 }
 
@@ -16,6 +16,16 @@
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+}
+.hover:hover {
+  background-image: url("/kakaologo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+.hover:hover code {
+  visibility : hidden
 }
 
 .description a {

@@ -1,7 +1,6 @@
 import Image from "next/image";
-import styles from "./page.module.css";
-
-export default function Home() {
+import styles from "../page.module.css";
+export default function houswarming() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
@@ -14,7 +13,7 @@ export default function Home() {
           </a>
         </div>
         <div>
-          <a href="/housewarming" target="_blank" rel="noopener noreferrer">
+          <a href="/hosewarming" target="_blank" rel="noopener noreferrer">
             By
             <Image
               src="/vercel.svg"
