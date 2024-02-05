@@ -30,9 +30,25 @@ export default function houswarming() {
       <div className={styles.center}>
         <Image
           className={styles.logo}
-          src="/ppueeng.png"
+          src="/house/sample_images_01.png"
           alt="Next.js Logo"
-          width={200}
+          width={600}
+          height={300}
+          priority
+        />
+        <Image
+          className={styles.logo}
+          src="/house/sample_images_02.png"
+          alt="Next.js Logo"
+          width={600}
+          height={300}
+          priority
+        />
+        <Image
+          className={styles.logo}
+          src="/house/sample_images_03.png"
+          alt="Next.js Logo"
+          width={600}
           height={300}
           priority
         />
