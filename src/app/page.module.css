@@ -113,9 +113,29 @@
   filter: blur(45px);
   transform: translateZ(0);
 }
-
+.centerimg {
+  display: flex;
+  width: 600px;
+}
+.centerflex{
+  display: flex;
+  width:900px;
+  justify-content: space-between; 
+    align-items: center;
+}
 .logo {
   position: relative;
+}
+.arrow{
+  color :black;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 4rem 0;
+  font-weight: bold;
+  cursor: pointer;
 }
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
@@ -210,7 +230,11 @@
     );
     z-index: 1;
   }
-}
+
+
+
+
+  }
 
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
