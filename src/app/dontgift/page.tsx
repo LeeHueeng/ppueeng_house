@@ -2,8 +2,8 @@
 import Image from "next/image";
 import styles from "../page.module.css";
 import { useState } from "react";
-/*@__CLIENT__*/
-export default function houswarming() {
+
+export default function Houserull() {
   const imagePaths = [
     "/house/sample_images_01.png",
     "/house/sample_images_02.png",
@@ -37,38 +37,31 @@ export default function houswarming() {
             </p>
           </a>
         </div>
-        <div>
-          <a href="/" rel="noopener noreferrer">
-            By
-            <Image
-              src="/logo.png"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      </div>
+
+      <div className={styles.center}>
+        <div className={styles.grid} onTouchStart={() => handleSwipe("left")}>
+          {imagePaths.map((path, index) => (
+            <div
+              key={index}
+              className={styles.card}
+              style={{
+                transform: `translateX(-${currentIndex * 100}%)`, // 슬라이드 효과
+              }}
+            >
+              <Image
+                className={styles.logo}
+                src={path}
+                alt={`이미지 ${index + 1}`}
+                width={200}
+                height={300}
+                priority
+              />
+            </div>
+          ))}
         </div>
       </div>
-      <div className={styles.centerflex}>
-        <div className={styles.arrow} onClick={(e) => handleSwipe("left")}>
-          &lt;
-        </div>
-        <div className={styles.centerimg}>
-          <Image
-            className={styles.logo}
-            src={imagePaths[currentIndex]}
-            alt={`Slide ${currentIndex + 1}`}
-            width={600}
-            height={300}
-            priority
-          />
-        </div>
-        <div className={styles.arrow} onClick={() => handleSwipe("right")}>
-          &gt;
-        </div>
-      </div>
+
       <div className={styles.grid}>
         <a
           href="/housewarming"
@@ -85,7 +78,6 @@ export default function houswarming() {
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
-          rel="noopener noreferrer"
         >
           <h2>
             예약하기 <span>-&gt;</span>
@@ -96,7 +88,7 @@ export default function houswarming() {
           </p>
         </a>
 
-        <a href="houserull" className={styles.card}>
+        <a href="/houserull" className={styles.card}>
           <h2>
             집들이 규칙 <span>-&gt;</span>
           </h2>
