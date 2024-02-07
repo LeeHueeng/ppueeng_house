@@ -55,9 +55,20 @@
   max-width: 100%;
   width: var(--max-width);
 }
-
+.giftcard{
+  padding: 1rem 1rem;
+  ;
+  border-radius: var(--border-radius);
+  background: rgba(var(--card-rgb), 0);
+  border: 1px solid rgba(var(--card-border-rgb), 0);
+  transition: background 200ms, border 200ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .card {
   padding: 1rem 1.2rem;
+  ;
   border-radius: var(--border-radius);
   background: rgba(var(--card-rgb), 0);
   border: 1px solid rgba(var(--card-border-rgb), 0);
@@ -140,7 +151,11 @@
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
-    background: rgba(var(--card-rgb), 0.1);
+    background: rgba(var(--card-rgb), 0.7);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+  .giftcard:hover{
+    background: rgba(var(--card-rgb), 1);
     border: 1px solid rgba(var(--card-border-rgb), 0.15);
   }
 
@@ -169,7 +184,7 @@
   }
 
   .card {
-    padding: 1rem 2.5rem;
+    padding: auto;
   }
 
   .card h2 {
@@ -249,6 +264,9 @@
   }
 
   .logo {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+  .giftimg {
     filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
   }
 }

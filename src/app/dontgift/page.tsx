@@ -37,14 +37,26 @@ export default function Houserull() {
             </p>
           </a>
         </div>
+        <div>
+          <a href="/">
+            By
+            <Image
+              src="/logo.png"
+              alt="Vercel Logo"
+              className={styles.vercelLogo}
+              width={100}
+              height={24}
+              priority
+            />
+          </a>
+        </div>
       </div>
-
       <div className={styles.center}>
         <div className={styles.grid} onTouchStart={() => handleSwipe("left")}>
           {imagePaths.map((path, index) => (
             <div
               key={index}
-              className={styles.card}
+              className={styles.giftcard}
               style={{
                 transform: `translateX(-${currentIndex * 100}%)`, // 슬라이드 효과
               }}
@@ -53,8 +65,8 @@ export default function Houserull() {
                 className={styles.logo}
                 src={path}
                 alt={`이미지 ${index + 1}`}
-                width={200}
-                height={300}
+                width={250}
+                height={180}
                 priority
               />
             </div>
@@ -95,11 +107,7 @@ export default function Houserull() {
           <p>간단한 집들이의 규칙을 알려드립니다.</p>
         </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          rel="noopener noreferrer"
-        >
+        <a href="dontgift" className={styles.card} rel="noopener noreferrer">
           <h2>
             이건 사오지마세요 <span>-&gt;</span>
           </h2>

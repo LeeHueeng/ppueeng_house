@@ -31,14 +31,14 @@ export default function houswarming() {
       <div className={styles.description}>
         <div>
           <p>예약 전 ppueeng 에게 문의하세요</p>
-          <a href="https://open.kakao.com/o/sfbiE17f" target="_blank">
+          <a href="https://open.kakao.com/o/sfbiE17f">
             <p className={`${styles.hover} ${styles.description}`}>
               <code className={styles.code}>카카오톡으로 문의하기</code>
             </p>
           </a>
         </div>
         <div>
-          <a href="/" rel="noopener noreferrer">
+          <a href="/">
             By
             <Image
               src="/logo.png"
@@ -52,7 +52,7 @@ export default function houswarming() {
         </div>
       </div>
       <div className={styles.centerflex}>
-        <div className={styles.arrow} onClick={(e) => handleSwipe("left")}>
+        <div className={styles.arrow} onClick={() => handleSwipe("left")}>
           &lt;
         </div>
         <div className={styles.centerimg}>
@@ -69,12 +69,9 @@ export default function houswarming() {
           &gt;
         </div>
       </div>
+
       <div className={styles.grid}>
-        <a
-          href="/housewarming"
-          className={styles.card}
-          rel="noopener noreferrer"
-        >
+        <a href="/housewarming" className={styles.card}>
           <h2>
             랜선 집들이 <span>-&gt;</span>
           </h2>
@@ -85,7 +82,6 @@ export default function houswarming() {
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
-          rel="noopener noreferrer"
         >
           <h2>
             예약하기 <span>-&gt;</span>
@@ -96,18 +92,13 @@ export default function houswarming() {
           </p>
         </a>
 
-        <a href="houserull" className={styles.card}>
+        <a href="/houserull" className={styles.card}>
           <h2>
             집들이 규칙 <span>-&gt;</span>
           </h2>
           <p>간단한 집들이의 규칙을 알려드립니다.</p>
         </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          rel="noopener noreferrer"
-        >
+        <a href="/dontgift" className={styles.card} rel="noopener noreferrer">
           <h2>
             이건 사오지마세요 <span>-&gt;</span>
           </h2>
