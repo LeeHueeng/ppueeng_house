@@ -79,10 +79,7 @@ export default function houswarming() {
           <p>ppueeng의 집은 항상 열려있답니다!</p>
         </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-        >
+        <a href="/reservation" className={styles.card}>
           <h2>
             예약하기 <span>-&gt;</span>
           </h2>

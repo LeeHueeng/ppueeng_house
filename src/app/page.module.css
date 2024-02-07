@@ -1,3 +1,35 @@
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.day {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  margin: 3px;
+  cursor: pointer;
+}
+
+.current-month {
+  background-color: #fff;
+}
+
+.other-month {
+  background-color: #eee;
+  color: #aaa;
+}
+
+.selected-day {
+  background-color: #3498db;
+  color: #fff;
+}
+
 .main {
   display: flex;
   flex-direction: column;

@@ -1,13 +1,31 @@
+"use client";
 import Image from "next/image";
 import styles from "../page.module.css";
+import { useState } from "react";
+import "react-calendar/dist/Calendar.css";
+import Calendar from "react-calendar";
+export default function Housewarming() {
+  const imagePaths = [
+    "/house/sample_images_01.png",
+    "/house/sample_images_02.png",
+    "/house/sample_images_03.png",
+    "/house/sample_images_04.png",
+    "/house/sample_images_05.png",
+    "/house/sample_images_06.png",
+  ];
+  const [date, setDate] = useState(new Date());
+  const koLocale: any = require("date-fns/locale/ko");
 
-export default function Houserull() {
+  const onChange = (newDate: any) => {
+    setDate(newDate);
+  };
+
   return (
     <main className={styles.main}>
       <div className={styles.description}>
         <div>
           <p>예약 전 ppueeng 에게 문의하세요</p>
-          <a href="https://open.kakao.com/o/sfbiE17f" target="_blank">
+          <a href="https://open.kakao.com/o/sfbiE17f">
             <p className={`${styles.hover} ${styles.description}`}>
               <code className={styles.code}>카카오톡으로 문의하기</code>
             </p>
@@ -27,42 +45,14 @@ export default function Houserull() {
           </a>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <div>
-          <h1 style={{ margin: "10px" }}>ppueeng의 허락을 맡고 오세요</h1>
-          <ol style={{ margin: "5px" }}>
-            <li style={{ margin: "5px" }}>
-              무턱대고 왔다가 그냥 돌아갈 수 있습니다.
-            </li>
-            <li style={{ margin: "5px" }}>ppueeng에게 연락을 먼저 주세요!</li>
-            <li style={{ margin: "5px" }}>
-              상호간의 예의를 지키며 연락을 주세요
-            </li>
-          </ol>
-          <h1 style={{ margin: "10px" }}>예약한다고 다 받을수는 없어요.</h1>
-          <ol>
-            <li style={{ margin: "5px" }}>일정이 안될경우 취소될 수 있어요!</li>
-            <li style={{ margin: "5px" }}>
-              최대한 노력해 보겠지만 어려울 수 도 있어요
-            </li>
-          </ol>
-          <h1 style={{ margin: "10px" }}>예약한다고 다 받을수는 없어요.</h1>
-          <ol style={{ margin: "5px" }}>
-            <li style={{ margin: "5px" }}>일정이 안될경우 취소될 수 있어요!</li>
-            <li style={{ margin: "5px" }}>
-              최대한 노력해 보겠지만 어려울 수 도 있어요
-            </li>
-          </ol>
+      <div className={styles.calendarContainer}>
+        <h2>예약일 설정</h2>
+        <div className={styles.calendarWrapper}>
+          <Calendar onChange={onChange} value={date} locale={koLocale} />
         </div>
       </div>
-
       <div className={styles.grid}>
-        <a
-          href="/housewarming"
-          className={styles.card}
-          rel="noopener noreferrer"
-        >
+        <a href="/housewarming" className={styles.card}>
           <h2>
             랜선 집들이 <span>-&gt;</span>
           </h2>
@@ -80,14 +70,13 @@ export default function Houserull() {
           </p>
         </a>
 
-        <a href="houserull" className={styles.card}>
+        <a href="/houserull" className={styles.card}>
           <h2>
             집들이 규칙 <span>-&gt;</span>
           </h2>
           <p>간단한 집들이의 규칙을 알려드립니다.</p>
         </a>
-
-        <a href="dontgift" className={styles.card} rel="noopener noreferrer">
+        <a href="/dontgift" className={styles.card} rel="noopener noreferrer">
           <h2>
             이건 사오지마세요 <span>-&gt;</span>
           </h2>
