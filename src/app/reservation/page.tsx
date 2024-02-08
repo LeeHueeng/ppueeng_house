@@ -5,7 +5,7 @@ import { useState } from "react";
 import "react-calendar/dist/Calendar.css";
 import Calendar from "react-calendar";
 import Bottom from "@/components/bottom";
-export default function Housewarming() {
+export default function Reservation() {
   const imagePaths = [
     "/house/sample_images_01.png",
     "/house/sample_images_02.png",

@@ -5,7 +5,7 @@ import { useState } from "react";
 import Top from "@/components/top";
 import Bottom from "@/components/bottom";
 
-export default function Houserull() {
+export default function Dontgift() {
   const imagePaths = [
     "/house/sample_images_01.png",
     "/house/sample_images_02.png",
@@ -53,8 +53,7 @@ export default function Houserull() {
           ))}
         </div>
       </div>
-
-      <Bottom />
+      <Bottom />r
     </main>
   );
 }
