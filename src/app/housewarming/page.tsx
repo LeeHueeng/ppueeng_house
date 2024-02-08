@@ -6,7 +6,7 @@ import { useState } from "react";
 import Top from "@/components/top";
 import Bottom from "@/components/bottom";
 /*@__CLIENT__*/
-export default function houswarming() {
+export default function Housewarming() {
   const imagePaths = [
     "/house/sample_images_01.png",
     "/house/sample_images_02.png",
